@@ -10,12 +10,14 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
+import {EntryPageComponent} from './components/entry-page/entry-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    MainPageComponent
+    MainPageComponent,
+    EntryPageComponent
   ],
   imports: [
     BrowserModule,

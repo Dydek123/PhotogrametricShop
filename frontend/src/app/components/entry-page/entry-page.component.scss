@@ -1,0 +1,27 @@
+section {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: calc(100vh - 64px);
+}
+
+.description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5rem;
+}
+
+.gif {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  line-height: 5rem;
+}
