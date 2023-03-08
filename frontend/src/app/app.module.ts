@@ -14,6 +14,7 @@ import {EntryPageComponent} from './components/entry-page/entry-page.component';
 import {BestsellerComponent} from './components/bestseller/bestseller.component';
 import {BestsellerCardsComponent} from './components/bestseller-cards/bestseller-cards.component';
 import {MatCardModule} from "@angular/material/card";
+import {CategoryComponent} from './components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatCardModule} from "@angular/material/card";
     MainPageComponent,
     EntryPageComponent,
     BestsellerComponent,
-    BestsellerCardsComponent
+    BestsellerCardsComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
