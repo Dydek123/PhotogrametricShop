@@ -11,13 +11,18 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {EntryPageComponent} from './components/entry-page/entry-page.component';
+import {BestsellerComponent} from './components/bestseller/bestseller.component';
+import {BestsellerCardsComponent} from './components/bestseller-cards/bestseller-cards.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     MainPageComponent,
-    EntryPageComponent
+    EntryPageComponent,
+    BestsellerComponent,
+    BestsellerCardsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,8 @@ import {EntryPageComponent} from './components/entry-page/entry-page.component';
     MatIconModule,
     MatButtonToggleModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

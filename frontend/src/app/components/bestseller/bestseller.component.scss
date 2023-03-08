@@ -1,0 +1,28 @@
+section {
+  height: 100vh;
+  padding: 5rem 0;
+}
+
+article {
+  flex-direction: column;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+article p {
+  font-size: 1.5rem
+}
+
+.bestseller {
+  width: 30%;
+}
