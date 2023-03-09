@@ -15,6 +15,8 @@ import {BestsellerComponent} from './components/bestseller/bestseller.component'
 import {BestsellerCardsComponent} from './components/bestseller-cards/bestseller-cards.component';
 import {MatCardModule} from "@angular/material/card";
 import {CategoryComponent} from './components/category/category.component';
+import {ContactComponent} from './components/contact/contact.component';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import {CategoryComponent} from './components/category/category.component';
     EntryPageComponent,
     BestsellerComponent,
     BestsellerCardsComponent,
-    CategoryComponent
+    CategoryComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import {CategoryComponent} from './components/category/category.component';
     MatButtonToggleModule,
     MatToolbarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
