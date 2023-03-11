@@ -1,0 +1,26 @@
+<h3>SIGN UP</h3>
+<form class="flex-center">
+  <mat-form-field appearance="fill">
+    <mat-label>Full name</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Login</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-button-toggle>Login</mat-button-toggle>
+
+  <button (click)="modeChange.emit(); $event.preventDefault()">Have an account? Login now</button>
+</form>

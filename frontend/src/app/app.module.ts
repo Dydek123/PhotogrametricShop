@@ -17,6 +17,9 @@ import {MatCardModule} from "@angular/material/card";
 import {CategoryComponent} from './components/category/category.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {MatListModule} from "@angular/material/list";
+import {LoginComponent} from './components/login/login.component';
+import {MatInputModule} from "@angular/material/input";
+import {SingupComponent} from './components/singup/singup.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import {MatListModule} from "@angular/material/list";
     BestsellerComponent,
     BestsellerCardsComponent,
     CategoryComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    SingupComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,8 @@ import {MatListModule} from "@angular/material/list";
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

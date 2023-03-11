@@ -59,3 +59,149 @@ input.rounded {
 input.rounded:focus {
   border-color: #339933;
 }
+
+
+//--------------------MODAL
+.enews-modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  padding: 0 1em;
+  text-align: center;
+  z-index: 4040 !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100vh;
+  width: 100%;
+}
+
+.modal_box {
+  height: 100%;
+}
+
+@media (min-width: 43.75em) {
+  .enews-modal {
+    padding: 1em 2em;
+    text-align: right;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 9000
+}
+
+.close-modal:hover {
+  opacity: .3;
+}
+
+.lr {
+  z-index: 2;
+  width: 1px;
+  height: 75px;
+  margin-left: 35px;
+  background-color: #2c3e50;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.lr .rl {
+  z-index: 3;
+  width: 1px;
+  height: 75px;
+  background-color: #2c3e50;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.modalOverlay {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 2;
+  display: block
+}
+
+.modal_box {
+  padding: 11em .75em;
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  background: rgba(245, 245, 245, 0.90);
+  flex-direction: column;
+}
+
+@media (min-width: 50em) {
+  .modal_box {
+    padding: 1.75em;
+  }
+}
+
+.modal_box h2 {
+  color: #222222;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+.modal_box p {
+  color: #222222;
+  text-align: left;
+  font-size: 18px;
+}
+
+.enewsHide {
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.enewsShow {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.open {
+  -webkit-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  transform: scale(0.97);
+}
+
+.panel {
+  width: 70%;
+  background-color: #2c3e50;
+  border-radius: 20px;
+  height: 80%;
+  flex-direction: column;
+
+  -webkit-box-shadow: 0px 0px 100px 10px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 0px 100px 10px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 100px 10px rgba(66, 68, 90, 1);
+}
+
+.login-form {
+  width: 40%;
+}

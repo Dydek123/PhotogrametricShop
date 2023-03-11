@@ -6,4 +6,11 @@ import {Component} from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  loginModalVisible: boolean;
+  loginMode: boolean;
+
+  onLoginOpen() {
+    this.loginModalVisible = true;
+    this.loginMode = true;
+  }
 }
