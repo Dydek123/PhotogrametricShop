@@ -20,6 +20,8 @@ import {MatListModule} from "@angular/material/list";
 import {LoginComponent} from './components/login/login.component';
 import {MatInputModule} from "@angular/material/input";
 import {SingupComponent} from './components/singup/singup.component';
+import {CatalogComponent} from './components/catalog/catalog.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import {SingupComponent} from './components/singup/singup.component';
     CategoryComponent,
     ContactComponent,
     LoginComponent,
-    SingupComponent
+    SingupComponent,
+    CatalogComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import {SingupComponent} from './components/singup/singup.component';
     MatButtonModule,
     MatCardModule,
     MatListModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

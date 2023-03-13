@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {CatalogService} from "../../services/catalog.service";
 
 @Component({
   selector: 'app-menu',
@@ -9,8 +10,16 @@ export class MenuComponent {
   loginModalVisible: boolean;
   loginMode: boolean;
 
+
+  constructor(private service: CatalogService) {
+  }
+
   onLoginOpen() {
     this.loginModalVisible = true;
     this.loginMode = true;
+  }
+
+  onMenuClick() {
+    this.service.toggleMenu();
   }
 }
