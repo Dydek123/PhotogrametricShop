@@ -1,0 +1,40 @@
+<header>
+  <mat-toolbar>
+    <button mat-icon-button class="mobile-menu" aria-label="Mobile menu" (click)="onMenuClick()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Photogrametric shop</span>
+    <span class="example-spacer"></span>
+    <nav>
+      <a href="#bestsellers">Bestsellers</a>
+      <a href="#categories">Categories</a>
+      <a href="#contact">Contact</a>
+      <input type="text" class="rounded" aria-label="Input to search products" placeholder="Search products">
+      <button mat-icon-button aria-label="Search products">
+        <mat-icon>search</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="Shopping list">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <mat-button-toggle aria-label="Login button" (click)="onLoginOpen()">Login</mat-button-toggle>
+    </nav>
+  </mat-toolbar>
+</header>
+
+<div class="enews-modal" *ngIf="loginModalVisible" [ngClass]="loginModalVisible ? 'enewsShow' : 'enewsHide'">
+  <div class="modalOverlay">
+    <div class="close-modal" (click)="loginModalVisible=false">
+      <div class="lr">
+        <div class="rl">
+        </div>
+      </div>
+    </div>
+
+    <div class="modal_box flex-center">
+      <div class="panel flex-center">
+        <app-login *ngIf="loginMode" class="login-form" (modeChange)="loginMode = false"></app-login>
+        <app-singup *ngIf="!loginMode" class="login-form" (modeChange)="loginMode = true"></app-singup>
+      </div>
+    </div>
+  </div>
+</div>

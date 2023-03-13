@@ -1,0 +1,33 @@
+section {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5rem;
+  background-color: #E0EDF5;
+
+  button {
+    width: 5vw;
+  }
+}
+
+.gif {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2F7FA;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  line-height: 5rem;
+  word-spacing: 80vw;
+}

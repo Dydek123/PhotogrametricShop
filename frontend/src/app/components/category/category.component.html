@@ -1,0 +1,10 @@
+<section class="flex-center" id="categories">
+  <h2>Categories</h2>
+  <p>Look at the best categories</p>
+  <div class="flex-center category-wrapper">
+    <div *ngFor="let category of categories" class="category">
+      <div class="img-wrapper"></div>
+      <span class="category-name">{{category.name}}</span>
+    </div>
+  </div>
+</section>
