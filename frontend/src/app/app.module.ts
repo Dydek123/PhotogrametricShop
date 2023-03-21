@@ -22,6 +22,8 @@ import {MatInputModule} from "@angular/material/input";
 import {SingupComponent} from './components/singup/singup.component';
 import {CatalogComponent} from './components/catalog/catalog.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {ProductComponent} from './components/product/product.component';
+import {CanvasBoxComponent} from './components/canvas-box/canvas-box.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     ContactComponent,
     LoginComponent,
     SingupComponent,
-    CatalogComponent
+    CatalogComponent,
+    ProductComponent,
+    CanvasBoxComponent
   ],
   imports: [
     BrowserModule,
