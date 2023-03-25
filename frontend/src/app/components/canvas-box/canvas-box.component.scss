@@ -1,10 +1,33 @@
 .container {
   width: 100%;
   padding-top: 64px;
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 64px);
+  justify-content: center;
+  align-items: center;
 }
 
-#canvas-box {
-  width: 100%;
+.canvas-wrapper {
+  width: 50%;
+  height: 70%;
+}
+
+#canvas {
+  width: 90%;
   height: 100%;
-  background-color: white;
+  border-radius: 40px;
+}
+
+.info {
+  width: 50%;
+  flex-direction: column;
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.bold {
+  font-weight: 700;
 }
