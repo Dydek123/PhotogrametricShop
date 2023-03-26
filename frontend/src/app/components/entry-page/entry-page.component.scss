@@ -29,5 +29,11 @@ h1 {
   text-transform: uppercase;
   font-size: 5rem;
   line-height: 5rem;
-  word-spacing: 80vw;
+  //word-spacing: 80vw;
+  width: 50%;
+  font-family: 'Lato', 'sans-serif';
+}
+
+.description p {
+  font-size: 1.5rem;
 }

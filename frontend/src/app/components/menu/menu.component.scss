@@ -205,3 +205,20 @@ input.rounded:focus {
 .login-form {
   width: 40%;
 }
+
+.logo {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5rem;
+}
+
+nav {
+  a {
+    text-decoration: none;
+    color: black;
+    transition: .5s ease-in-out;
+
+    &:hover {
+      color: #507dae;
+    }
+  }
+}

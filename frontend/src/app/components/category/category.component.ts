@@ -14,31 +14,38 @@ export class CategoryComponent {
     },
     {
       name: 'Clothes',
-      img: 'example.png'
+      img: 'tshirt.jpg'
     },
     {
       name: 'Jewelery',
-      img: 'example.png'
+      img: 'necklace.jpeg'
     },
     {
       name: 'Watch',
-      img: 'example.png'
+      img: 'watch.jpeg'
     },
     {
-      name: 'Cup',
-      img: 'example.png'
+      name: 'Medicine',
+      img: 'syrup.webp'
     },
     {
-      name: 'T-shirt',
-      img: 'example.png'
+      name: 'Sport',
+      img: 'kit.png'
     },
     {
-      name: 'T-shirt',
-      img: 'example.png'
+      name: 'Food',
+      img: 'fork.jpg'
     },
     {
-      name: 'T-shirt',
-      img: 'example.png'
+      name: 'Toy',
+      img: 'toy.png'
     }
   ]
+
+  getBackgroundStyle(img: string) {
+    return 'background: url(/assets/' + img + ');'
+      + '  background-repeat: no-repeat;' +
+      '  background-size: contain;' +
+      '  background-position: center;'
+  }
 }

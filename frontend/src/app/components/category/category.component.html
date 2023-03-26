@@ -2,9 +2,9 @@
   <h2>Categories</h2>
   <p>Look at the best categories</p>
   <div class="flex-center category-wrapper">
-    <div *ngFor="let category of categories" class="category">
-      <div class="img-wrapper"></div>
+    <a href="#" *ngFor="let category of categories" class="category">
+      <div class="img-wrapper" [style]="getBackgroundStyle(category.img)"></div>
       <span class="category-name">{{category.name}}</span>
-    </div>
+    </a>
   </div>
 </section>
