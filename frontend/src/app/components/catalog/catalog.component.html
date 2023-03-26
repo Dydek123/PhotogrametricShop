@@ -4,20 +4,36 @@
   </mat-drawer>
 
   <div class="sidenav-content">
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
-    <app-bestseller-cards></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/example.png" [price]="59.99"
+                          description="Shoes MH150"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/tshirt.jpg" [price]="29.99"
+                          description="T-Shirt"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/necklace.jpeg" [price]="199.99"
+                          description="Gold necklace"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/watch.jpeg" [price]="209.99"
+                          description="Watch WG410"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/syrup.webp" [price]="2.99"
+                          description="Cough syrup"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/kit.png" [price]="49.99"
+                          description="Football kit"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/fork.jpg" [price]="159.99"
+                          description="Cutlery set"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/toy.png" [price]="9.99"
+                          description="Pikachu"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/watch.jpeg" [price]="409.99"
+                          description="Watch WG410"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/syrup.webp" [price]="1.99"
+                          description="Cough syrup"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/kit.png" [price]="69.99"
+                          description="Football kit"></app-bestseller-cards>
+    <app-bestseller-cards class="bestseller" imgSource="assets/fork.jpg" [price]="99.99"
+                          description="Cutlery set"></app-bestseller-cards>
   </div>
 
 </mat-drawer-container>
+
+<div class="button-wrapper flex-center">
+  <button mat-raised-button color="primary">Load more ...</button>
+</div>
 
 <app-contact></app-contact>
