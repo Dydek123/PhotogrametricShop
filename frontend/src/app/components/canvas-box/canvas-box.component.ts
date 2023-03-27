@@ -22,6 +22,11 @@ export class CanvasBoxComponent implements OnInit, AfterViewInit {
 
   @Input('farClipping') public farClippingPane: number = 1000;
 
+  @Input() name: string = 'MG20';
+  @Input() description: string = 'Most comfortable shoes ever';
+  @Input() price: number = 153;
+  @Input() feature: string = 'Red Black';
+
   //? Scene properties
   private camera: THREE.PerspectiveCamera;
 
