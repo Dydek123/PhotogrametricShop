@@ -1,16 +1,17 @@
 <mat-card>
   <mat-card-header>
-    <div *ngIf="imgSource != null" class="img-wrapper" [style]="getBackgroundStyle(imgSource)"></div>
-    <div *ngIf="imgSource == null" class="img-wrapper" [style]="getBackgroundStyle('assets/example.png')"></div>
+    <div *ngIf="product.url != null" class="img-wrapper" [style]="getBackgroundStyle('assets/' + product.url)"></div>
+    <div *ngIf="product.url == null" class="img-wrapper" [style]="getBackgroundStyle('assets/example.png')"></div>
   </mat-card-header>
   <mat-card-content>
-    <p *ngIf="description == null">No description set</p>
-    <p *ngIf="description != null">{{description}}</p>
+    <p *ngIf="product.name == null">No description set</p>
+    <p *ngIf="product.name != null">{{product.name}}</p>
 
-    <p *ngIf="price == null" class="cost">19.99$</p>
-    <p *ngIf="price != null" class="cost">{{price}}$</p>
+    <p *ngIf="product.price == null" class="cost">19.99$</p>
+    <p *ngIf="product.price != null" class="cost">{{product.price}}$</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>Details</button>
+    <!--    <button mat-button (click)="routeTo(product.id)">Details</button>-->
+    <button mat-button [routerLink]="getUrl(product.id)">Details</button>
   </mat-card-actions>
 </mat-card>

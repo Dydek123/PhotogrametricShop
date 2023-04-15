@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {ProductModel} from "../../models/product.model";
 
 @Component({
   selector: 'app-bestseller-cards',
@@ -6,14 +7,20 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./bestseller-cards.component.scss']
 })
 export class BestsellerCardsComponent {
-  @Input() imgSource: string;
-  @Input() description: string;
-  @Input() price: number;
+  @Input() product: ProductModel;
+
+
+  constructor() {
+  }
 
   getBackgroundStyle(imgSource: string): string {
     return 'background: url(/' + imgSource + ');'
       + '  background-repeat: no-repeat;' +
       '  background-size: contain;' +
       '  background-position: center;'
+  }
+
+  getUrl(id: number): string {
+    return '/product/' + id;
   }
 }

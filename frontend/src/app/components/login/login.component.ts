@@ -7,7 +7,6 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class LoginComponent {
   @Output() modeChange: EventEmitter<void> = new EventEmitter<void>();
-
   onClick($event: MouseEvent) {
     this.modeChange.emit();
     $event.preventDefault();

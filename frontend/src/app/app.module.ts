@@ -24,6 +24,7 @@ import {CatalogComponent} from './components/catalog/catalog.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {ProductComponent} from './components/product/product.component';
 import {CanvasBoxComponent} from './components/canvas-box/canvas-box.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import {CanvasBoxComponent} from './components/canvas-box/canvas-box.component';
     MatCardModule,
     MatListModule,
     MatInputModule,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
