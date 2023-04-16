@@ -1,26 +1,26 @@
 <h3>SIGN UP</h3>
-<form class="flex-center">
+<form class="flex-center" [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill">
     <mat-label>Full name</mat-label>
-    <input matInput>
+    <input matInput formControlName="fullName">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Address</mat-label>
-    <input matInput>
+    <input matInput formControlName="address">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Login</mat-label>
-    <input matInput>
+    <input matInput formControlName="login">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Password</mat-label>
-    <input matInput>
+    <input matInput type="password" formControlName="password">
   </mat-form-field>
 
-  <mat-button-toggle>Login</mat-button-toggle>
+  <button type="submit" mat-raised-button>Sign up</button>
 
   <button (click)="modeChange.emit(); $event.preventDefault()">Have an account? Login now</button>
 </form>

@@ -1,16 +1,16 @@
 <h3>LOGIN</h3>
-<form class="flex-center">
+<form class="flex-center" [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill">
     <mat-label>Login</mat-label>
-    <input matInput>
+    <input matInput formControlName="login">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Password</mat-label>
-    <input matInput>
+    <input matInput type="password" formControlName="password">
   </mat-form-field>
 
-  <mat-button-toggle>Login</mat-button-toggle>
+  <button type="submit" mat-raised-button>Login</button>
 
   <button (click)="onClick($event)">Don't have an account? Sign now</button>
 </form>

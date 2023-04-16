@@ -25,6 +25,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {ProductComponent} from './components/product/product.component';
 import {CanvasBoxComponent} from './components/canvas-box/canvas-box.component';
 import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatListModule,
     MatInputModule,
     MatSidenavModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

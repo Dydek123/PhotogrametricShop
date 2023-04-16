@@ -3,7 +3,7 @@
     <canvas #canvas id="canvas"></canvas>
   </div>
 
-  <section class="info flex-center">
+  <section class="info flex-center" *ngIf="product">
     <h2>{{product.name}}</h2>
     <p class="bold font-1">{{product.description}}</p>
     <p class="font-07">{{product.price}}$</p>
