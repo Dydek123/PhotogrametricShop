@@ -1,0 +1,20 @@
+<div class="modal-wrapper"></div>
+<div class="modal">
+  <div class="modal-header">
+    <h3>Twój koszyk: {{products.length}} ({{getSum()}}$)</h3>
+  </div>
+  <div class="modal-content">
+    <div *ngFor="let product of products" class="item">
+      <div class="item-content">
+        <img [src]="'assets/' + product.url" [alt]="product.name">
+        <span>{{product.name}} ({{product.price}}$)</span>
+      </div>
+      <div class="item-buttons">
+        <mat-icon class="pointer red" (click)="removeItem(product)">delete</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button mat-raised-button color="primary">Go to payment</button>
+  </div>
+</div>

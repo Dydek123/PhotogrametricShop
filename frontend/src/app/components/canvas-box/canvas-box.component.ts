@@ -5,6 +5,8 @@ import {CSS2DRenderer} from "three/examples/jsm/renderers/CSS2DRenderer";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import {OBJLoader} from "three/examples/jsm/loaders/OBJLoader";
 import {ProductModel} from "../../models/product.model";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {ProductService} from "../../services/product.service";
 
 @Component({
   selector: 'app-canvas-box',
@@ -155,7 +157,8 @@ export class CanvasBoxComponent implements OnInit, AfterViewInit {
     }());
   }
 
-  constructor() {
+  constructor(private _snackBar: MatSnackBar,
+              private productService: ProductService) {
   }
 
   ngOnInit(): void {
@@ -178,6 +181,20 @@ export class CanvasBoxComponent implements OnInit, AfterViewInit {
       box.getCenter(this.model.position); // this re-sets the mesh position
       this.model.position.multiplyScalar(-1);
       this.scene.add(this.model);
+    });
+  }
+
+  openSnackBar() {
+    this.productService.productsInCart.push(this.product);
+    const itemsInStorage = localStorage.getItem('cart');
+    let products = [];
+    if (itemsInStorage) {
+      products = JSON.parse(itemsInStorage);
+    }
+    products.push(this.product);
+    localStorage.setItem('cart', JSON.stringify(products))
+    this._snackBar.open('Added to cart', '', {
+      duration: 3000
     });
   }
 }

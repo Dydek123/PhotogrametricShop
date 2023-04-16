@@ -9,6 +9,7 @@ import {CatalogService} from "../../services/catalog.service";
 export class MenuComponent {
   loginModalVisible: boolean;
   loginMode: boolean;
+  showCart: boolean;
 
 
   constructor(private service: CatalogService) {
@@ -21,5 +22,9 @@ export class MenuComponent {
 
   onMenuClick() {
     this.service.toggleMenu();
+  }
+
+  toogleCard() {
+    this.showCart = !this.showCart;
   }
 }
