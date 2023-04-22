@@ -27,7 +27,9 @@ export class SingupComponent {
 
   onSubmit() {
     if (this.form.valid) {
-      this.service.signup(this.form.value).subscribe(user => console.log(user));
+      this.service.signup(this.form.value).subscribe(user => {
+        localStorage.setItem('user', JSON.stringify(user))
+      });
     }
   }
 }

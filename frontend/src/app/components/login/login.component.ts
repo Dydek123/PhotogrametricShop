@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
 
   @Output() modeChange: EventEmitter<void> = new EventEmitter<void>();
+  @Output() loginSuccess: EventEmitter<void> = new EventEmitter<void>();
 
 
   constructor(private formBuilder: FormBuilder,
@@ -32,7 +33,10 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.form.valid) {
-      this.service.login(this.form.value).subscribe(user => console.log(user));
+      this.service.login(this.form.value).subscribe(user => {
+        localStorage.setItem('user', JSON.stringify(user));
+        this.loginSuccess.emit();
+      });
     }
   }
 }

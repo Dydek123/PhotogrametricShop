@@ -16,7 +16,8 @@
       <button mat-icon-button aria-label="Shopping list" (click)="toogleCard()">
         <mat-icon>shopping_cart</mat-icon>
       </button>
-      <mat-button-toggle aria-label="Login button" (click)="onLoginOpen()">Login</mat-button-toggle>
+      <mat-button-toggle *ngIf="!user" aria-label="Login button" (click)="onLoginOpen()">Login</mat-button-toggle>
+      <mat-button-toggle *ngIf="!!user" aria-label="logout button" (click)="logout()">Logout</mat-button-toggle>
     </nav>
   </mat-toolbar>
 </header>
@@ -32,7 +33,8 @@
 
     <div class="modal_box flex-center">
       <div class="panel flex-center">
-        <app-login *ngIf="loginMode" class="login-form" (modeChange)="loginMode = false"></app-login>
+        <app-login *ngIf="loginMode" class="login-form" (modeChange)="loginMode = false"
+                   (loginSuccess)="onLoginSuccess()"></app-login>
         <app-singup *ngIf="!loginMode" class="login-form" (modeChange)="loginMode = true"></app-singup>
       </div>
     </div>
