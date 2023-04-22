@@ -28,6 +28,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {CartComponent} from './components/cart/cart.component';
+import {SubmitPanelComponent} from './components/submit-panel/submit-panel.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {CartComponent} from './components/cart/cart.component';
     CatalogComponent,
     ProductComponent,
     CanvasBoxComponent,
-    CartComponent
+    CartComponent,
+    SubmitPanelComponent
   ],
   imports: [
     BrowserModule,
